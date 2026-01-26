@@ -991,10 +991,12 @@ for your chosen model for specifics.
         {
           type: "image",
           source_type: "url",
+          mime_type: "image/jpeg",
           url: "https://example.com/path/to/image.jpg"
-        },
+        }
       ],
     });
+
 
     // From base64 data
     const message = new HumanMessage({
@@ -1002,8 +1004,9 @@ for your chosen model for specifics.
         { type: "text", text: "Describe the content of this image." },
         {
           type: "image",
-          source_type: "base64",
-          data: "AAAAIGZ0eXBtcDQyAAAAAGlzb21tcDQyAAACAGlzb2...",
+          source_type: "base64,
+          mime_type: "image/jpeg",
+          data: "AAAAIGZ0eXBtcDQyAAAAAGlzb21tcDQyAAACAGlzb2..."
         },
       ],
     });
